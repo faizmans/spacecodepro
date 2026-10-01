@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Space Code Pro - Ahmedabad's premier technology and coding lab for Standards 5-12.">
+    <title>Space Code Pro | Engineering the Future</title>
+    
+    <!-- Preconnect for fast font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Defer JS so it doesn't block page rendering -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Glassmorphism Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo" aria-label="Home">Space Code Pro.</a>
+            
+            <!-- Desktop Menu -->
+            <div class="nav-links">
+                <a href="#courses">Curriculum</a>
+                <a href="#enroll" class="btn-primary">Apply Now</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+<!-- Hero Section (Premium Bespoke Layout) -->
+<section class="hero-bespoke" id="home">
+    <div class="hero-ambient-warm"></div>
+    
+    <div class="content-wrapper">
+        <div class="bespoke-grid">
+            
+            <!-- LEFT COLUMN: Conversational & Warm Typography -->
+            <div class="hero-text-col">
+                
+                <div class="hero-badge-pill fade-up">
+                    <span class="live-dot"></span>
+                    Ahmedabad's Hands-On Coding Lab
+                </div>
+
+                <h1 class="fade-up delay-1">
+                    The best way to predict the future<br>
+                    <span class="text-highlight">is to invent it.</span>
+                </h1>
+                
+                <p class="hero-subtitle-bespoke fade-up delay-2">
+                    We move beyond boring textbook theory. At Space Code Pro, your child learns real Python, AI, and Web Design by actively building projects they actually care about.
+                </p>
+                
+                <div class="hero-action-area fade-up delay-3">
+                    <div class="btn-group-row">
+                        <a href="#enroll" class="btn-primary-bespoke">
+                            Book a Free Visit
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#courses" class="btn-secondary-bespoke">Explore Curriculum</a>
+                    </div>
+                    
+                    <div class="social-proof-bespoke">
+                        <div class="avatar-stack">
+                            <div class="svg-avatar" style="background: #e0eafc;">
+                                <svg viewBox="0 0 100 100"><circle cx="50" cy="40" r="18" fill="#4facfe"/><path d="M20 90 Q50 60 80 90" fill="none" stroke="#4facfe" stroke-width="12" stroke-linecap="round"/></svg>
+                            </div>
+                            <div class="svg-avatar" style="background: #f3e8fd;">
+                                <svg viewBox="0 0 100 100"><circle cx="50" cy="45" r="16" fill="#bf5af2"/><path d="M25 90 Q50 65 75 90" fill="none" stroke="#bf5af2" stroke-width="12" stroke-linecap="round"/></svg>
+                            </div>
+                            <div class="svg-avatar" style="background: #e3f8e7;">
+                                <svg viewBox="0 0 100 100"><circle cx="50" cy="40" r="18" fill="#34c759"/><path d="M20 90 Q50 60 80 90" fill="none" stroke="#34c759" stroke-width="12" stroke-linecap="round"/></svg>
+                            </div>
+                        </div>
+                        <div class="social-text">
+                            <div class="stars">★★★★★</div>
+                            <span>Loved by <strong>50+ parents</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: The Maker's Canvas -->
+            <div class="hero-visual-col fade-up delay-2">
+                <div class="makers-canvas">
+                    
+                    <!-- Base Layer: SVG Canvas Wrapper -->
+                    <div class="main-photo-wrapper">
+                        <!-- High-quality SVG Illustration -->
+                        <img src="https://www.svgrepo.com/show/308014/professor-school-college-achievement.svg" alt="Mentorship and Learning" class="main-student-img" loading="eager">
+                        <div class="photo-caption">Real Mentorship. Real Skills.</div>
+                    </div>
+
+                    <!-- Floating Layer 1: The Code (Input) -->
+                    <div class="floating-element float-code-block">
+                        <div class="mini-header">
+                            <span class="dot close"></span><span class="dot min"></span><span class="dot max"></span>
+                            <span class="file-name">game.py</span>
+                        </div>
+                        <div class="code-content">
+                            <span class="kw">def</span> <span class="fn">start_game</span>():<br>
+                            &nbsp;&nbsp;player = <span class="str">"Ready"</span><br>
+                            &nbsp;&nbsp;<span class="kw">while</span> player:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;score += <span class="num">10</span>
+                            <span class="typing-cursor"></span>
+                        </div>
+                    </div>
+
+                    <!-- Organic Connection: Hand-drawn SVG Arrow -->
+                    <svg class="hand-drawn-arrow" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="arrow-path" d="M10,90 C40,90 60,20 180,30" stroke="#0071e3" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5" />
+                        <path class="arrow-head" d="M170,15 L185,30 L165,40" stroke="#0071e3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <!-- Floating Layer 2: The Output (Result) -->
+                    <div class="floating-element float-result-block">
+                        <div class="result-badge">Live Output</div>
+                        <div class="result-ui">
+                            <div class="ui-circle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <div class="ui-text">
+                                <h4>Level Unlocked!</h4>
+                                <p>Score: <strong>1,450</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- Philosophy & Approach Section -->
+<section class="philosophy" id="philosophy">
+    <!-- Pro Graphic: Smooth Ambient Animated Background -->
+    <div class="phil-ambient-bg">
+        <div class="ambient-blob blob-1"></div>
+        <div class="ambient-blob blob-2"></div>
+        <div class="ambient-grid"></div>
+    </div>
+
+    <div class="content-wrapper relative-wrapper">
+        
+        <!-- Section Header -->
+        <div class="philosophy-header fade-up">
+            <span class="kicker-badge">Our Approach</span>
+            <h2>Coding education built for the real world.</h2>
+            <p class="large-text">We complement your child's school education by focusing on hands-on creation. Our lab environment is designed to build problem-solving skills, logic, and creative confidence through interactive technology.</p>
+        </div>
+
+        <!-- 3-Pillar Premium Glass Grid -->
+        <div class="philosophy-grid">
+            
+            <!-- Pillar 1: Active Learning (Animated Terminal Icon) -->
+            <div class="phil-card glass-card-light fade-up delay-1">
+                <div class="phil-glow-overlay"></div>
+                <div class="phil-icon-wrapper">
+                    <svg class="anim-svg-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line class="blinking-cursor" x1="12" y1="19" x2="20" y2="19"></line>
+                    </svg>
+                </div>
+                <h3>Active, Hands-On Learning</h3>
+                <p>Students learn by doing. Every concept is practiced by writing and running code on dedicated lab computers, turning abstract theory into engaging, active learning.</p>
+            </div>
+
+            <!-- Pillar 2: Fundamentals (Animated Nodes Icon) -->
+            <div class="phil-card glass-card-light fade-up delay-2">
+                <div class="phil-glow-overlay"></div>
+                <div class="phil-icon-wrapper">
+                    <svg class="anim-svg-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle class="node pulse-node-1" cx="18" cy="18" r="3"></circle>
+                        <circle class="node pulse-node-2" cx="6" cy="6" r="3"></circle>
+                        <circle class="node pulse-node-3" cx="18" cy="6" r="3"></circle>
+                        <path class="draw-line" d="M18 15L18 9"></path>
+                        <path class="draw-line delay-line" d="M9 6L15 6"></path>
+                    </svg>
+                </div>
+                <h3>Future-Ready Fundamentals</h3>
+                <p>We introduce students to the foundational building blocks of modern programming like Python and Web Design, giving them a solid head start for their higher education.</p>
+            </div>
+
+            <!-- Pillar 3: Projects (Animated Browser Icon) -->
+            <div class="phil-card glass-card-light fade-up delay-3">
+                <div class="phil-glow-overlay"></div>
+                <div class="phil-icon-wrapper">
+                    <svg class="anim-svg-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <path class="slide-up-element" d="M9 21V14H15V21"></path>
+                    </svg>
+                </div>
+                <h3>Creative Student Projects</h3>
+                <p>Learning is most effective when it's enjoyable. Students apply their new skills to build interactive web pages, simple text games, and logic puzzles they can be proud to share.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- Curriculum Section -->
+<!-- Curriculum Section -->
+<section class="curriculum" id="courses">
+    <div class="content-wrapper relative-wrapper">
+        
+        <div class="section-heading-center fade-up">
+            <h2 class="apple-heading">The Learning Pathway.</h2>
+            <p class="apple-subheading">Practical, 3-month foundational programs designed for standard 5 to 12.</p>
+        </div>
+
+        <!-- Course 1: Standards 5-8 -->
+        <div class="course-card glass-card-clean fade-up">
+            <div class="course-info">
+                <span class="badge badge-blue">Phase 1: Std 5 – 8</span>
+                <h3>Logic & Foundations.</h3>
+                <p class="course-desc">A gentle 3-month introduction to the world of computer science. Your child will transition from basic concepts to writing their first lines of Python and crafting simple web pages, building a strong logical mindset.</p>
+                
+                <ul class="apple-feature-list">
+                    <li><strong>Computational Thinking:</strong> Solving problems logically, step-by-step.</li>
+                    <li><strong>Intro to Python:</strong> Writing basic scripts and text-based games.</li>
+                    <li><strong>Web Basics:</strong> Creating colorful pages with HTML & CSS.</li>
+                    <li><strong>Digital Creativity:</strong> Understanding how software is built behind the scenes.</li>
+                </ul>
+            </div>
+            
+            <div class="course-visual visual-1">
+                <div class="glass-overlay">
+                    <div class="floating-block block-a">{' '}</div>
+                    <div class="floating-block block-b">< / ></div>
+                    <div class="floating-block block-c">#</div>
+                </div>
+                <div class="abstract-shape"></div>
+            </div>
+        </div>
+
+        <!-- Course 2: Standards 9-12 -->
+        <div class="course-card reverse glass-card-dark fade-up delay-1">
+            <div class="course-info text-light-force">
+                <span class="badge badge-cyan">Phase 2: Std 9 – 12</span>
+                <h3>Core Programming.</h3>
+                <p class="course-desc">A focused 3-month program designed to build practical coding skills. Students move beyond school theory to create interactive web projects and learn the fundamentals of modern programming logic used by real developers.</p>
+                
+                <ul class="apple-feature-list list-light">
+                    <li><strong>Applied Python:</strong> Working with data, loops, and logic structures.</li>
+                    <li><strong>Interactive Web Dev:</strong> Building responsive, usable web layouts.</li>
+                    <li><strong>Intro to Smart Algorithms:</strong> Understanding how basic chatbots work.</li>
+                    <li><strong>Project Portfolio:</strong> Completing a capstone project to showcase their skills.</li>
+                </ul>
+            </div>
+            
+            <!-- Visual Pipeline Animation -->
+            <div class="course-visual visual-2">
+                <div class="abstract-grid"></div>
+                
+                <!-- Animated Data Flow Lines -->
+                <svg class="pipeline-svg" viewBox="0 0 200 200" preserveAspectRatio="none">
+                    <path class="flow-line" d="M 60 100 C 100 100, 100 50, 140 50" stroke="rgba(0, 242, 254, 0.2)" fill="none" stroke-width="2"/>
+                    <path class="flow-line-active" d="M 60 100 C 100 100, 100 50, 140 50" stroke="#00f2fe" fill="none" stroke-width="2"/>
+                    
+                    <path class="flow-line" d="M 60 100 C 100 100, 100 150, 140 150" stroke="rgba(191, 90, 242, 0.2)" fill="none" stroke-width="2"/>
+                    <path class="flow-line-active delay-flow" d="M 60 100 C 100 100, 100 150, 140 150" stroke="#bf5af2" fill="none" stroke-width="2"/>
+                </svg>
+
+                <!-- 1. The Code Editor (Input) -->
+                <div class="mockup-panel code-mockup">
+                    <div class="panel-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    </div>
+                    <div class="code-lines">
+                        <div class="c-line w-80 blue"></div>
+                        <div class="c-line w-60 indent pink"></div>
+                        <div class="c-line w-40 indent green"></div>
+                        <div class="c-line w-70 blue"></div>
+                    </div>
+                </div>
+
+                <!-- 2. The Logic Model (Output 1) -->
+                <div class="mockup-panel ai-mockup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="1.5">
+                        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path>
+                        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path>
+                    </svg>
+                    <div class="panel-label cyan-glow">Logic Built</div>
+                </div>
+
+                <!-- 3. The Web App (Output 2) -->
+                <div class="mockup-panel app-mockup">
+                    <div class="app-nav"></div>
+                    <div class="app-hero"></div>
+                    <div class="app-grid">
+                        <div></div><div></div>
+                    </div>
+                    <div class="panel-label purple-glow">App Live</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<!-- Meet the Mentor Section -->
+<section class="mentor-section section-dark" id="mentor">
+    <div class="content-wrapper">
+        <div class="mentor-container">
+            
+            <!-- Left: Professional Portrait & Trust Badges -->
+            <div class="mentor-image-col fade-up">
+                <div class="image-wrapper">
+                    <!-- High-quality online placeholder -->
+                    <img src="https://www.svgrepo.com/show/484863/male.svg" alt="Lead Instructor" class="mentor-photo">
+                    
+                    <!-- Clean Trust Badge -->
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <div class="badge-text">
+                            <span class="badge-title">Verified Mentor</span>
+                            <span class="badge-sub">Industry Professional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Warm, Parent-Focused Copy -->
+            <div class="mentor-text-col">
+                <span class="kicker-text fade-up">Your Child's Mentor</span>
+                <h2 class="fade-up">Guidance from a professional <br><span class="text-blue">Software Engineer.</span></h2>
+                
+                <p class="mentor-bio fade-up delay-1">
+                    Most coding classes hire basic tutors. At Space Code Pro, your child is personally mentored by a working tech professional. The goal is to bridge the gap between textbook computer science and the actual skills top tech companies demand today.
+                </p>
+
+                <!-- Famous Inspirational Quote -->
+                <blockquote class="mentor-quote fade-up delay-1">
+                    "Education is not the learning of facts, but the training of the mind to think."
+                    <span class="quote-author">— Albert Einstein</span>
+                </blockquote>
+                
+                <div class="credentials-list">
+                    <!-- Credential 1: Real-World Experience -->
+                    <div class="credential-item fade-up delay-2">
+                        <div class="cred-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        </div>
+                        <div class="cred-text">
+                            <h4>Real-World Engineering</h4>
+                            <p>Bringing years of hands-on experience in building advanced software, web applications, and AI models directly into the classroom to inspire the next generation.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Credential 2: Teaching Methodology -->
+                    <div class="credential-item fade-up delay-3">
+                        <div class="cred-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <div class="cred-text">
+                            <h4>Safe & Focused Learning</h4>
+                            <p>We maintain strict micro-batches to guarantee your child gets dedicated 1-on-1 attention, building their confidence through interactive, practical projects rather than dry theory.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================================
+         STUDENT SHOWCASE SECTION (3 Premium Cards: Dark / Light / Dark)
+         ========================================================================== -->
+    <section class="showcase-section" id="showcase">
+        <div class="content-wrapper">
+            
+            <!-- Section Header -->
+            <div class="section-heading-center reveal-up">
+                <div class="hero-badge-pill" style="margin: 0 auto 1.5rem auto;">
+                    Student Showcase
+                </div>
+                <h2 class="apple-heading">Built by our students.</h2>
+                <p class="apple-subheading">Parents often ask, "What will my child actually learn?" Here is a glimpse of the real-world applications our students build from scratch.</p>
+            </div>
+
+            <!-- Showcase Grid (3 Cards) -->
+            <div class="showcase-grid">
+                
+                <!-- Project 1: Visual Python Game (DARK CARD) -->
+               <!-- Project 1: Visual Python Game (DARK CARD) -->
+                <div class="showcase-card card-dark reveal-up delay-100">
+                    <div class="mockup-window">
+                        <div class="mockup-header">
+                            <span class="dot close"></span><span class="dot min"></span><span class="dot max"></span>
+                            <span class="mockup-title">SpaceShooter.py</span>
+                        </div>
+                        <div class="mockup-body game-theme">
+                            <!-- Score updates dynamically via CSS -->
+                            <div class="game-score">SCORE: <span class="score-val"></span></div>
+                            
+                            <!-- Synchronized Alien & Explosion -->
+                            <div class="game-alien">
+                                <span class="monster">👾</span>
+                                <span class="explosion">💥</span>
+                            </div>
+                            
+                            <div class="game-laser"></div>
+                            <div class="game-ship">🚀</div>
+                        </div>
+                    </div>
+                    <div class="showcase-info">
+                        <div class="project-tags">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-logic">Math & Logic</span>
+                        </div>
+                        <h3>Interactive Arcade Games</h3>
+                        <p class="parent-benefit">Instead of just playing games, students learn the complex math, coordinates, and logic required to build them.</p>
+                        <p class="student-credit">Built by <strong>Aarav</strong> (Std 8)</p>
+                    </div>
+                </div>
+
+                <!-- Project 2: AI / Computer Vision (LIGHT CARD) -->
+                <div class="showcase-card card-light reveal-up delay-200">
+                    <div class="mockup-window">
+                        <div class="mockup-header">
+                            <span class="dot close"></span><span class="dot min"></span><span class="dot max"></span>
+                            <span class="mockup-title">Face_Tracker.exe</span>
+                        </div>
+                        <div class="mockup-body ai-theme">
+                            <svg class="ai-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            <div class="bounding-box">
+                                <div class="scan-line"></div>
+                                <div class="ai-label">Match: 98%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-info">
+                        <div class="project-tags">
+                            <span class="tag tag-ai">AI & Vision</span>
+                            <span class="tag tag-python">Python</span>
+                        </div>
+                        <h3>Smart Face Detection</h3>
+                        <p class="parent-benefit">We demystify Artificial Intelligence. Your child learns how to train computer vision models to recognize objects and faces.</p>
+                        <p class="student-credit">Built by <strong>Riya</strong> (Std 10)</p>
+                    </div>
+                </div>
+
+                <!-- Project 3: Web Development (DARK CARD) -->
+                <div class="showcase-card card-dark reveal-up delay-300">
+                    <div class="mockup-window">
+                        <div class="mockup-header">
+                            <span class="dot close"></span><span class="dot min"></span><span class="dot max"></span>
+                            <span class="mockup-title">SneakerStore.html</span>
+                        </div>
+                        <div class="mockup-body web-theme">
+                            <div class="mini-app">
+                                <div class="app-nav"><span>UI.</span><svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div>
+                                <div class="app-card">
+                                    <div class="app-image">👟</div>
+                                    <div class="app-text">Limited Edition</div>
+                                    <div class="app-btn">Buy Now</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-info">
+                        <div class="project-tags">
+                            <span class="tag tag-html">HTML/CSS</span>
+                            <span class="tag tag-ui">UI Design</span>
+                        </div>
+                        <h3>Modern Web Applications</h3>
+                        <p class="parent-benefit">Turns screen time into creation time. Students design beautiful, mobile-friendly websites just like professional developers.</p>
+                        <p class="student-credit">Built by <strong>Kabir</strong> (Std 7)</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+       <!-- Enrollment Section -->
+<section class="enrollment section-light" id="enroll">
+    <div class="content-wrapper">
+        <div class="enrollment-grid">
+            
+            <!-- Left Side: Information & Trust Timeline -->
+            <div class="enrollment-info fade-up">
+                <span class="kicker-badge">Admissions Open</span>
+                <h2>Start their coding journey today.</h2>
+                <p class="enrollment-desc">
+                    We keep our Kalupur batches strictly limited to 6 students to ensure your child gets dedicated hardware and personalized, 1-on-1 mentorship. 
+                </p>
+                
+                <!-- Interactive Timeline -->
+                <div class="steps-timeline">
+                    <!-- The background line -->
+                    <div class="timeline-line"></div>
+                    
+                    <div class="step-item">
+                        <div class="step-circle">1</div>
+                        <div class="step-content">
+                            <h4>Check Availability</h4>
+                            <p>Submit this quick form to let us know your child's standard.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle">2</div>
+                        <div class="step-content">
+                            <h4>Quick WhatsApp Chat</h4>
+                            <p>Our team will reach out to answer any questions you have.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle">3</div>
+                        <div class="step-content">
+                            <h4>Free Lab Visit & Trial</h4>
+                            <p>Visit the lab, meet the mentor, and let your child experience a free class.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Premium Form with Graphics -->
+            <div class="enrollment-form-wrapper fade-up delay-1">
+                
+                <!-- Floating Decorative Graphics -->
+                <div class="graphic-shape shape-sphere"></div>
+                <div class="graphic-shape shape-code">&lt;/&gt;</div>
+                <div class="graphic-shape shape-dots"></div>
+
+                <form class="premium-form" id="enrollForm">
+                    <div class="form-header">
+                        <h3>Request a Call Back</h3>
+                        <p>No commitment. Let's discuss your child's goals.</p>
+                    </div>
+                    
+                    <!-- Modern Floating Label Inputs -->
+                    <div class="form-floating">
+                        <!-- Note: placeholder=" " is required for the CSS trick to work -->
+                        <input type="text" id="parentName" placeholder=" " required autocomplete="off">
+                        <label for="parentName">Parent's Name</label>
+                    </div>
+                    
+                    <div class="form-floating">
+                        <input type="tel" id="whatsapp" placeholder=" " required autocomplete="off">
+                        <label for="whatsapp">WhatsApp Number</label>
+                    </div>
+                    
+                    <div class="form-floating select-floating">
+                        <select id="standard" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="5-8">Standard 5 to 8</option>
+                            <option value="9-12">Standard 9 to 12</option>
+                        </select>
+                        <label for="standard">Student's Standard</label>
+                        <!-- Custom Select Arrow -->
+                        <div class="select-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary large w-100 btn-glow" id="submitBtn">
+                        <span class="btn-text">Book a Free Visit</span>
+                        <span class="btn-loader" style="display: none;">
+                            <svg class="spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle></svg>
+                        </span>
+                    </button>
+                    
+                    <p class="privacy-note">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        Your information is secure and never shared.
+                    </p>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+   <!-- Premium Minimalist Dark Footer -->
+<footer class="site-footer-dark">
+    <div class="content-wrapper footer-grid">
+        
+        <!-- Column 1: Brand & Mission -->
+        <div class="footer-brand fade-up">
+            <h3>Space Code Pro.</h3>
+            <p>Engineering the next generation of tech leaders in Kalupur, Ahmedabad with premium, hands-on smart classes.</p>
+            <div class="footer-status-clean">
+                <span class="status-dot"></span>
+                Admissions Open for 2026
+            </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col fade-up delay-1">
+            <h4>Explore</h4>
+            <div class="footer-links-clean">
+                <a href="index.html#home">Overview</a>
+                <a href="index.html#courses">Curriculum</a>
+                <a href="index.html#enroll">Book a Free Visit</a>
+            </div>
+        </div>
+
+        <!-- Column 3: Legal -->
+        <div class="footer-col fade-up delay-2">
+            <h4>Legal</h4>
+            <div class="footer-links-clean">
+                <a href="legal.html">Privacy Policy</a>
+                <a href="termsofservice.html">Terms of Service</a>
+            </div>
+        </div>
+
+        <!-- Column 4: Contact & Location -->
+        <div class="footer-col fade-up delay-3 contact-col">
+            <h4>Connect</h4>
+            <address class="footer-address-clean">
+                Kalupur Area<br>
+                Ahmedabad, Gujarat<br>
+                India
+            </address>
+            <a href="mailto:hello@spacecodepro.in" class="footer-email-clean">
+                hello@spacecodepro.in
+            </a>
+        </div>
+        
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom-dark fade-up delay-3">
+        <div class="content-wrapper bottom-flex">
+            <p>&copy; 2026 Space Code Pro. All rights reserved.</p>
+            <p class="made-in-clean">Designed in Ahmedabad</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
