@@ -936,149 +936,184 @@ section { padding: 6rem 5%; position: relative; }
     .visual-canvas { transform: scale(0.75); transform-origin: center center; }
 }
 /* ==========================================================================
-   ENROLLMENT SECTION (Enhanced UI & Graphics)
+   ENROLLMENT SECTION (Apple Keynote Aesthetic & Shimmer UI)
    ========================================================================== */
-.enrollment {
-    padding: 8rem 5%;
-    background-color: #ffffff;
-    overflow: hidden;
+
+.enrollment-bespoke {
     position: relative;
+    padding: 8rem 5%;
+    background-color: #f5f5f7; /* Very subtle off-white */
+    overflow: hidden;
+}
+
+/* Cinematic Mesh Gradient Background */
+.mesh-ambient {
+    position: absolute; border-radius: 50%; filter: blur(90px);
+    z-index: 0; pointer-events: none; opacity: 0.6;
+    animation: ambient-breathe 10s ease-in-out infinite alternate;
+}
+.mesh-blue { top: -10%; right: 10%; width: 45vw; height: 45vw; background: rgba(0, 113, 227, 0.15); }
+.mesh-purple { bottom: -20%; left: -10%; width: 50vw; height: 50vw; background: rgba(191, 90, 242, 0.12); animation-delay: -5s; }
+
+@keyframes ambient-breathe {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.1) translate(-30px, 30px); }
 }
 
 .enrollment-grid {
-    display: grid; grid-template-columns: 1fr; gap: 4rem;
-    max-width: 1100px; margin: 0 auto; align-items: center;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem;
+    align-items: center; max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;
 }
 
-@media (min-width: 900px) {
-    .enrollment-grid { grid-template-columns: 1.1fr 0.9fr; gap: 6rem; }
+/* --- LEFT SIDE: Timeline & Info --- */
+.dark-pill {
+    background: rgba(0,0,0,0.04); color: #1d1d1f;
+    border: 1px solid rgba(0,0,0,0.08); margin-bottom: 2rem;
 }
 
-/* Typography */
-.enrollment-info h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--text-dark); margin-bottom: 1rem; line-height: 1.1; }
-.enrollment-desc { font-size: 1.1rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 3rem; max-width: 500px; }
-.kicker-badge { display: inline-block; padding: 6px 16px; background-color: rgba(0, 113, 227, 0.1); color: var(--accent-blue); border-radius: 30px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; }
-
-/* --- Interactive Timeline --- */
-.steps-timeline { display: flex; flex-direction: column; gap: 1.5rem; position: relative; }
-.timeline-line { position: absolute; top: 10px; bottom: 20px; left: 19px; width: 2px; background: #e5e5ea; z-index: 0; }
-
-.step-item { display: flex; align-items: flex-start; gap: 1.5rem; position: relative; z-index: 1; transition: transform 0.3s ease; }
-.step-item:hover { transform: translateX(10px); } /* Shifts slightly right on hover */
-
-.step-circle {
-    width: 40px; height: 40px; border-radius: 50%; background: #ffffff; border: 2px solid #d2d2d7;
-    color: #86868b; display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 1.1rem; flex-shrink: 0; box-shadow: 0 0 0 4px #ffffff;
-    transition: all 0.3s ease;
+.apple-heading-small {
+    font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 800; color: #1d1d1f;
+    line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1.2rem;
 }
 
-.step-item:hover .step-circle {
-    background: var(--accent-blue); border-color: var(--accent-blue); color: #ffffff;
-    box-shadow: 0 0 0 4px #ffffff, 0 0 15px rgba(0, 113, 227, 0.3);
+.enrollment-desc {
+    font-size: 1.1rem; color: #515154; line-height: 1.65; margin-bottom: 3.5rem; max-width: 90%;
 }
 
-.step-content h4 { font-size: 1.1rem; color: var(--text-dark); margin-bottom: 0.3rem; margin-top: 0.5rem; transition: color 0.3s; }
-.step-item:hover .step-content h4 { color: var(--accent-blue); }
-.step-content p { font-size: 0.95rem; color: var(--text-muted); margin: 0; }
-
-/* --- Floating Graphics Behind Form --- */
-.enrollment-form-wrapper { position: relative; z-index: 10; }
-
-.graphic-shape { position: absolute; z-index: -1; pointer-events: none; }
-.shape-sphere {
-    width: 120px; height: 120px; border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #4facfe, #0071e3);
-    top: -40px; right: -30px; filter: blur(2px);
-    box-shadow: 0 20px 40px rgba(0, 113, 227, 0.4);
-    animation: float-obj 6s ease-in-out infinite;
-}
-.shape-code {
-    top: 40px; left: -40px;
-    font-size: 3rem; font-weight: 900; font-family: monospace;
-    color: rgba(191, 90, 242, 0.2);
-    animation: float-obj 5s ease-in-out infinite alternate;
-}
-.shape-dots {
-    bottom: -30px; left: -20px; width: 100px; height: 100px;
-    background-image: radial-gradient(#d2d2d7 2px, transparent 2px); background-size: 15px 15px;
-    animation: float-obj 7s ease-in-out infinite reverse;
+/* Glassmorphism Order-Tracker Timeline */
+.premium-timeline { display: flex; flex-direction: column; gap: 1.5rem; position: relative; }
+.premium-timeline::before {
+    content: ''; position: absolute; top: 20px; bottom: 20px; left: 15px;
+    width: 2px; background: rgba(0,0,0,0.06); z-index: 1;
 }
 
-@keyframes float-obj {
-    0% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(5deg); }
-    100% { transform: translateY(0) rotate(0deg); }
-}
+.timeline-step { display: flex; align-items: flex-start; gap: 1.5rem; position: relative; z-index: 2; }
 
-/* --- Premium Form Card --- */
-.premium-form {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(0,0,0,0.05); border-radius: 24px;
-    padding: 3rem 2.5rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(255,255,255,0.5);
+/* The Glass Card Steps */
+.timeline-glass-card {
+    background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8); border-radius: 16px; padding: 1.2rem 1.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.02); transition: all 0.3s ease; width: 100%;
+}
+.timeline-step:hover .timeline-glass-card {
+    background: rgba(255, 255, 255, 0.9); box-shadow: 0 15px 30px rgba(0, 113, 227, 0.08); transform: translateY(-2px);
+}
+.timeline-active .timeline-glass-card { background: rgba(255, 255, 255, 0.9); border-color: #0071e3; box-shadow: 0 15px 30px rgba(0, 113, 227, 0.1); }
+
+.step-indicator {
+    width: 32px; height: 32px; border-radius: 50%; background: #ffffff;
+    border: 2px solid #d2d2d7; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 15px; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.inner-dot { width: 12px; height: 12px; border-radius: 50%; background: transparent; transition: all 0.3s ease; }
+
+.pulse-active { border-color: #0071e3; box-shadow: 0 0 0 6px rgba(0, 113, 227, 0.15); }
+.pulse-active .inner-dot { background: #0071e3; }
+
+.timeline-glass-card h4 { font-size: 1.1rem; font-weight: 700; color: #1d1d1f; margin-bottom: 6px; }
+.timeline-glass-card p { font-size: 0.95rem; color: #515154; line-height: 1.5; margin: 0; }
+
+
+/* --- RIGHT SIDE: Premium Form Card --- */
+.enrollment-form-col { position: relative; width: 100%; display: flex; justify-content: center; }
+
+/* Floating Decorative Elements */
+.floating-tech-element {
+    position: absolute; width: 56px; height: 56px; background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,1); border-radius: 16px;
+    display: flex; align-items: center; justify-content: center; box-shadow: 0 15px 35px rgba(0,0,0,0.08); z-index: 1;
+}
+.floating-tech-element svg { width: 28px; height: 28px; }
+.tech-1 { top: -25px; right: -25px; animation: float-badge-1 4s ease-in-out infinite alternate; }
+.tech-2 { bottom: 50px; left: -35px; animation: float-badge-2 5s ease-in-out infinite alternate-reverse; }
+
+/* The Pristine Card */
+.premium-form-card {
+    position: relative; z-index: 2; width: 100%; max-width: 500px;
+    background: #ffffff; border-radius: 32px; padding: 3.5rem;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.03);
 }
 
 .form-header { text-align: center; margin-bottom: 2.5rem; }
-.form-header h3 { font-size: 1.6rem; color: var(--text-dark); margin-bottom: 0.5rem; }
-.form-header p { font-size: 0.95rem; color: var(--text-muted); }
+.secure-badge {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 800;
+    color: #32d74b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem;
+    background: rgba(50, 215, 75, 0.1); padding: 6px 14px; border-radius: 20px;
+}
+.secure-badge svg { width: 14px; height: 14px; }
+.form-header h3 { font-size: 1.8rem; font-weight: 800; color: #1d1d1f; margin-bottom: 8px; }
+.form-header p { font-size: 0.95rem; color: #86868b; }
 
-/* Modern Floating Label Inputs */
-.form-floating { position: relative; margin-bottom: 1.5rem; }
+/* Form Inputs */
+.apple-form { display: flex; flex-direction: column; gap: 1.5rem; }
+.input-group { position: relative; width: 100%; }
+.apple-input {
+    width: 100%; padding: 1.3rem 1.2rem 0.6rem; font-size: 1rem; color: #1d1d1f;
+    background: #f5f5f7; border: 1.5px solid transparent; border-radius: 14px;
+    outline: none; font-family: inherit; transition: all 0.3s ease;
+    appearance: none; -webkit-appearance: none;
+}
+.apple-input:focus { background: #ffffff; border-color: #0071e3; box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15); }
 
-.form-floating input, .form-floating select {
-    width: 100%; padding: 24px 18px 8px; /* Extra padding top for label */
-    background: #f5f5f7; border: 2px solid transparent; border-radius: 12px;
-    font-size: 1.05rem; color: var(--text-dark); transition: all 0.3s ease;
-    outline: none; font-family: inherit; font-weight: 500;
+.apple-label {
+    position: absolute; left: 1.2rem; top: 50%; transform: translateY(-50%);
+    font-size: 1rem; color: #86868b; pointer-events: none; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.apple-input:focus ~ .apple-label, .apple-input:not(:placeholder-shown) ~ .apple-label {
+    top: 14px; font-size: 0.75rem; color: #0071e3; font-weight: 700;
+}
+.select-group select:focus ~ .select-label, .select-group select:valid ~ .select-label {
+    top: 14px; font-size: 0.75rem; color: #0071e3; font-weight: 700;
+}
+.custom-select-icon { position: absolute; right: 1.2rem; top: 50%; transform: translateY(-50%); pointer-events: none; color: #86868b; }
+.custom-select-icon svg { width: 18px; height: 18px; }
+
+/* The Glossy Shimmer Button */
+.btn-submit-shimmer {
+    position: relative; width: 100%; background: #1d1d1f; color: #ffffff; border: none;
+    padding: 18px; border-radius: 16px; font-size: 1.1rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    cursor: pointer; overflow: hidden; margin-top: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-submit-shimmer:hover { transform: scale(1.02); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+.btn-submit-shimmer svg { width: 20px; height: 20px; transition: transform 0.3s ease; position: relative; z-index: 2; }
+.btn-submit-shimmer:hover svg { transform: translateX(5px); }
+.btn-text-content { position: relative; z-index: 2; }
+
+/* The continuous light-sweep effect */
+.btn-submit-shimmer::after {
+    content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: skewX(-20deg); animation: shimmer-sweep 3s infinite; z-index: 1;
+}
+@keyframes shimmer-sweep { 0% { left: -100%; } 20% { left: 200%; } 100% { left: 200%; } }
+
+.form-footer-note { text-align: center; margin-top: 1rem; }
+.form-footer-note p { font-size: 0.85rem; color: #a1a1a6; line-height: 1.5; margin: 0; }
+
+
+/* ==========================================================================
+   FLAWLESS MOBILE RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .enrollment-grid { grid-template-columns: 1fr; gap: 4rem; }
+    .premium-timeline { max-width: 600px; margin: 0 auto; }
+    .enrollment-info { text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .timeline-step { text-align: left; } /* Keep steps left-aligned inside centered container */
 }
 
-.form-floating label {
-    position: absolute; top: 16px; left: 18px;
-    color: #86868b; font-size: 1.05rem; pointer-events: none;
-    transition: all 0.2s ease-out; transform-origin: left top;
-}
-
-/* The magic: when input is focused, OR when it has text inside (not empty placeholder) */
-.form-floating input:focus, .form-floating select:focus {
-    background: #ffffff; border-color: rgba(0, 113, 227, 0.4);
-    box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1);
-}
-
-.form-floating input:focus + label, 
-.form-floating input:not(:placeholder-shown) + label,
-.form-floating select:focus + label,
-.form-floating select:valid + label {
-    transform: translateY(-8px) scale(0.75); /* Shrinks and moves up */
-    color: var(--accent-blue);
-    font-weight: 600;
-}
-
-/* Select specific tweaks */
-.select-floating select { appearance: none; cursor: pointer; }
-.select-arrow { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); color: #86868b; pointer-events: none; }
-.select-arrow svg { width: 20px; height: 20px; transition: transform 0.3s; }
-.select-floating select:focus ~ .select-arrow svg { transform: translateY(-50%) rotate(180deg); color: var(--accent-blue); }
-
-.w-100 { width: 100%; }
-
-/* Loading Spinner CSS */
-.spinner { animation: rotate 2s linear infinite; width: 20px; height: 20px; margin-left: 10px; vertical-align: middle; }
-.spinner .path { stroke: #ffffff; stroke-linecap: round; animation: dash 1.5s ease-in-out infinite; }
-@keyframes rotate { 100% { transform: rotate(360deg); } }
-@keyframes dash { 0% { stroke-dasharray: 1, 150; stroke-dashoffset: 0; } 50% { stroke-dasharray: 90, 150; stroke-dashoffset: -35; } 100% { stroke-dasharray: 90, 150; stroke-dashoffset: -124; } }
-
-.privacy-note { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 1.5rem; font-size: 0.8rem; color: #a1a1a6; text-align: center; }
-.privacy-note svg { width: 14px; height: 14px; color: #34c759; }
-
-/* Mobile Adjustments */
 @media (max-width: 600px) {
-    .enrollment { padding: 5rem 5%; }
-    .premium-form { padding: 2rem 1.5rem; }
-    .shape-sphere { width: 80px; height: 80px; top: -20px; right: -10px; }
+    .enrollment-bespoke { padding: 6rem 8%; } /* 8% margins */
+    .premium-form-card { padding: 2.5rem 1.5rem; border-radius: 24px; }
+    
+    .tech-1, .tech-2 { display: none; }
+    
+    .apple-heading-small { font-size: 2.2rem; }
+    .timeline-glass-card { padding: 1rem; }
+    
+    .apple-input { padding: 1.1rem 1rem 0.5rem; font-size: 0.95rem; }
+    .btn-submit-shimmer { padding: 16px; font-size: 1.05rem; }
 }
-
 /* ==========================================================================
    PREMIUM MINIMALIST DARK FOOTER (Fully Responsive & Spaced)
    ========================================================================== */
