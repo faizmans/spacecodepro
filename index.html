@@ -16,30 +16,49 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Glassmorphism Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-content">
-            <a href="#" class="logo" aria-label="Home">Space Code Pro.</a>
-            
-            <!-- Desktop Menu -->
-            <div class="nav-links">
-                <a href="#courses">Curriculum</a>
-                <a href="#enroll" class="btn-primary">Apply Now</a>
-            </div>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
+<!-- Premium Frosted Glass Navbar -->
+<nav class="navbar" id="navbar">
+    <div class="nav-content">
+        <a href="#" class="logo" aria-label="Home">Space Code Pro.</a>
+        
+        <!-- Desktop Menu -->
+        <div class="nav-links">
+            <a href="#philosophy">Approach</a>
+            <a href="#courses">Curriculum</a>
+            <a href="#mentor">Mentor</a>
+            <a href="#enroll" class="btn-primary-nav">Apply Now</a>
         </div>
-    </nav>
+
+        <!-- Mobile Menu Toggle (Animated Hamburger) -->
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Menu">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay (Hidden by default) -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-nav-links">
+            <a href="#philosophy" class="mobile-link">Approach</a>
+            <a href="#courses" class="mobile-link">Curriculum</a>
+            <a href="#mentor" class="mobile-link">Mentor</a>
+            
+            <div class="mobile-divider"></div>
+            
+            <!-- Legal Links specifically in the mobile menu -->
+            <a href="legal.html" class="mobile-link secondary-link">Legal</a>
+            <a href="termsofservice.html" class="mobile-link secondary-link">Privacy Policy</a>
+            
+            <a href="#enroll" class="btn-primary-nav mobile-apply-btn">Apply Now</a>
+        </div>
+    </div>
+</nav>
 
     <main>
-<!-- Hero Section (Premium Spatial 3D Masterpiece) -->
+<!-- Hero Section (Premium Spatial 3D Masterpiece - Mobile Optimized) -->
 <section class="hero-bespoke" id="home">
     <div class="hero-ambient-glow"></div>
     
@@ -65,23 +84,33 @@
                 
                 <div class="hero-action-area fade-up delay-3">
                     <div class="btn-group-row">
-                        <a href="#enroll" class="btn-primary-bespoke">
-                            Book a Free Visit
-                        </a>
+                        <a href="#enroll" class="btn-primary-bespoke">Book a Free Visit</a>
                         <a href="#courses" class="btn-secondary-bespoke">Explore Curriculum</a>
                     </div>
                     
-                    <div class="social-proof-bespoke">
-                        <div class="avatar-stack">
-                            <div class="svg-avatar avatar-1"><svg viewBox="0 0 100 100"><circle cx="50" cy="40" r="18" fill="#4facfe"/><path d="M20 90 Q50 60 80 90" fill="none" stroke="#4facfe" stroke-width="12" stroke-linecap="round"/></svg></div>
-                            <div class="svg-avatar avatar-2"><svg viewBox="0 0 100 100"><circle cx="50" cy="45" r="16" fill="#bf5af2"/><path d="M25 90 Q50 65 75 90" fill="none" stroke="#bf5af2" stroke-width="12" stroke-linecap="round"/></svg></div>
-                            <div class="svg-avatar avatar-3"><svg viewBox="0 0 100 100"><circle cx="50" cy="40" r="18" fill="#34c759"/><path d="M20 90 Q50 60 80 90" fill="none" stroke="#34c759" stroke-width="12" stroke-linecap="round"/></svg></div>
-                        </div>
-                        <div class="social-text">
-                            <div class="stars">★★★★★</div>
-                            <span>Loved by <strong>50+ parents</strong></span>
-                        </div>
-                    </div>
+                    <!-- Enhanced Premium Social Proof (Illustrated Avatars) -->
+<div class="social-proof-bespoke fade-up delay-4">
+    <div class="avatar-stack">
+        <!-- High-quality illustrated vector avatars -->
+        <img src="https://api.dicebear.com/7.x/micah/svg?seed=Felix&backgroundColor=e0eafc" alt="Parent Review" class="avatar-item avatar-1">
+        <img src="https://api.dicebear.com/7.x/micah/svg?seed=Aneka&backgroundColor=f3e8fd" alt="Parent Review" class="avatar-item avatar-2">
+        <img src="https://api.dicebear.com/7.x/micah/svg?seed=Sarah&backgroundColor=e3f8e7" alt="Parent Review" class="avatar-item avatar-3">
+        <!-- The overflow counter -->
+        <div class="avatar-item avatar-more">+47</div>
+    </div>
+    
+    <div class="social-text">
+        <!-- Premium SVG Stars -->
+        <div class="svg-stars">
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        </div>
+        <span>Trusted by <strong>50+ parents</strong></span>
+    </div>
+</div>
                 </div>
             </div>
 
@@ -113,11 +142,9 @@
                         </div>
 
                         
-
-                        <!-- Floating UI Badges (Now with Sleek SVGs) -->
+                        <!-- Floating UI Badges -->
                         <div class="iso-badge badge-1 glass-panel">
                             <span class="badge-icon">
-                                <!-- Minimalist Code Brackets SVG (Python) -->
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="16 18 22 12 16 6"></polyline>
                                     <polyline points="8 6 2 12 8 18"></polyline>
@@ -128,18 +155,13 @@
                         
                         <div class="iso-badge badge-2 glass-panel">
                             <span class="badge-icon">
-                                <!-- Minimalist AI Microchip SVG -->
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
                                     <rect x="9" y="9" width="6" height="6"></rect>
-                                    <line x1="9" y1="1" x2="9" y2="4"></line>
-                                    <line x1="15" y1="1" x2="15" y2="4"></line>
-                                    <line x1="9" y1="20" x2="9" y2="23"></line>
-                                    <line x1="15" y1="20" x2="15" y2="23"></line>
-                                    <line x1="20" y1="9" x2="23" y2="9"></line>
-                                    <line x1="20" y1="14" x2="23" y2="14"></line>
-                                    <line x1="1" y1="9" x2="4" y2="9"></line>
-                                    <line x1="1" y1="14" x2="4" y2="14"></line>
+                                    <line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line>
+                                    <line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line>
+                                    <line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line>
+                                    <line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line>
                                 </svg>
                             </span> 
                             AI & Vision
@@ -271,171 +293,263 @@
         </div>
     </div>
 </section>
-    <!-- Curriculum Section -->
-<!-- Curriculum Section -->
-<section class="curriculum" id="courses">
+<!-- Curriculum Section (Ultra-Premium Apple Style) -->
+<section class="curriculum-bespoke" id="courses">
     <div class="content-wrapper relative-wrapper">
         
+        <!-- Section Header -->
         <div class="section-heading-center fade-up">
             <h2 class="apple-heading">The Learning Pathway.</h2>
             <p class="apple-subheading">Practical, 3-month foundational programs designed for standard 5 to 12.</p>
         </div>
 
-        <!-- Course 1: Standards 5-8 -->
-        <div class="course-card glass-card-clean fade-up">
-           <div class="course-info">
-                <span class="badge badge-blue">Phase 1: Std 5 – 8</span>
-                <h3>Logic & Foundations.</h3>
-                <p class="course-desc">A 3-month journey from absolute beginner to writing real code. Your child will build web pages, create simple games, and develop a powerful problem-solving mindset.</p>
-                
-                <ul class="apple-feature-list">
-                    <li><strong>Problem Solving:</strong> Breaking down complex challenges into simple, logical steps.</li>
-                    <li><strong>Real Python Code:</strong> Writing actual text-based scripts, not just playing block games.</li>
-                    <li><strong>Web Design:</strong> Building and styling their very first websites from scratch.</li>
-                    <li><strong>Tech Confidence:</strong> Shifting from a screen-time consumer to a digital creator.</li>
-                </ul>
-            </div>
+        <div class="course-grid-container">
             
-            <div class="course-visual visual-1">
-                <div class="glass-overlay">
-                    <div class="floating-block block-a">{' '}</div>
-                    <div class="floating-block block-b">< / ></div>
-                    <div class="floating-block block-c">#</div>
-                </div>
-                <div class="abstract-shape"></div>
-            </div>
-        </div>
-
-        <!-- Course 2: Standards 9-12 -->
-        <div class="course-card reverse glass-card-dark fade-up delay-1">
-           <div class="course-info text-light-force">
-                <span class="badge badge-cyan">Phase 2: Std 9 – 12</span>
-                <h3>Core Programming.</h3>
-                <p class="course-desc">A 3-month program that brings their high school computer syllabus to life. Students master Python and web development, turning textbook theory into real working applications.</p>
+            <!-- COURSE 1: Standards 5-8 (Light Glass Card) -->
+            <div class="course-card phase-1-card fade-up">
                 
-                <ul class="apple-feature-list list-light">
-                    <li><strong>Python Mastery:</strong> Learning the core logic, loops, and data structures required for board exams and beyond.</li>
-                    <li><strong>Web Development:</strong> Coding interactive, responsive websites using HTML, CSS, and modern design principles.</li>
-                    <li><strong>Smart Algorithms:</strong> Demystifying tech by writing the logic behind simple chatbots and everyday apps.</li>
-                    <li><strong>College-Ready Portfolio:</strong> Graduating with a completed digital project that proves their real-world skills.</li>
-                </ul>
-            </div>
-            
-            <!-- Visual Pipeline Animation -->
-            <div class="course-visual visual-2">
-                <div class="abstract-grid"></div>
-                
-                <!-- Animated Data Flow Lines -->
-                <svg class="pipeline-svg" viewBox="0 0 200 200" preserveAspectRatio="none">
-                    <path class="flow-line" d="M 60 100 C 100 100, 100 50, 140 50" stroke="rgba(0, 242, 254, 0.2)" fill="none" stroke-width="2"/>
-                    <path class="flow-line-active" d="M 60 100 C 100 100, 100 50, 140 50" stroke="#00f2fe" fill="none" stroke-width="2"/>
+                <!-- Text Content -->
+                <div class="course-text-col">
+                    <span class="badge badge-blue">Phase 1: Std 5 – 8</span>
+                    <h3>Logic & Foundations.</h3>
+                    <p class="course-desc">A 3-month journey from absolute beginner to writing real code. Your child will build web pages, create simple games, and develop a powerful problem-solving mindset.</p>
                     
-                    <path class="flow-line" d="M 60 100 C 100 100, 100 150, 140 150" stroke="rgba(191, 90, 242, 0.2)" fill="none" stroke-width="2"/>
-                    <path class="flow-line-active delay-flow" d="M 60 100 C 100 100, 100 150, 140 150" stroke="#bf5af2" fill="none" stroke-width="2"/>
-                </svg>
-
-                <!-- 1. The Code Editor (Input) -->
-                <div class="mockup-panel code-mockup">
-                    <div class="panel-header">
-                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                    </div>
-                    <div class="code-lines">
-                        <div class="c-line w-80 blue"></div>
-                        <div class="c-line w-60 indent pink"></div>
-                        <div class="c-line w-40 indent green"></div>
-                        <div class="c-line w-70 blue"></div>
-                    </div>
+                    <ul class="apple-feature-list">
+                        <li>
+                            <div class="list-icon"></div>
+                            <span><strong>Problem Solving:</strong> Breaking down complex challenges into simple, logical steps.</span>
+                        </li>
+                        <li>
+                            <div class="list-icon"></div>
+                            <span><strong>Real Python Code:</strong> Writing actual text-based scripts, not just playing block games.</span>
+                        </li>
+                        <li>
+                            <div class="list-icon"></div>
+                            <span><strong>Web Design:</strong> Building and styling their very first websites from scratch.</span>
+                        </li>
+                        <li>
+                            <div class="list-icon"></div>
+                            <span><strong>Tech Confidence:</strong> Shifting from a screen-time consumer to a digital creator.</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- 2. The Logic Model (Output 1) -->
-                <div class="mockup-panel ai-mockup">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="1.5">
-                        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path>
-                        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path>
-                    </svg>
-                    <div class="panel-label cyan-glow">Logic Built</div>
-                </div>
-
-                <!-- 3. The Web App (Output 2) -->
-                <div class="mockup-panel app-mockup">
-                    <div class="app-nav"></div>
-                    <div class="app-hero"></div>
-                    <div class="app-grid">
-                        <div></div><div></div>
+                <!-- Visual 1: REVERTED Floating Blocks (Inside Bug-Free Container) -->
+                <div class="course-visual-col">
+                    <div class="visual-canvas scale-fix">
+                        <div class="course-visual visual-1">
+                            <div class="glass-overlay">
+                                <div class="floating-block block-a">{ }</div>
+                                <div class="floating-block block-b">&lt; / &gt;</div>
+                                <div class="floating-block block-c">#</div>
+                            </div>
+                            <div class="abstract-shape"></div>
+                        </div>
                     </div>
-                    <div class="panel-label purple-glow">App Live</div>
                 </div>
             </div>
+
+            <!-- COURSE 2: Standards 9-12 (Dark Glass Card) -->
+            <div class="course-card phase-2-card reverse-layout fade-up delay-1">
+                
+                <!-- Text Content -->
+                <div class="course-text-col text-light-force">
+                    <span class="badge badge-cyan">Phase 2: Std 9 – 12</span>
+                    <h3>Core Programming.</h3>
+                    <p class="course-desc">A 3-month program that brings their high school computer syllabus to life. Students master Python and web development, turning textbook theory into real working applications.</p>
+                    
+                    <ul class="apple-feature-list list-light">
+                        <li>
+                            <div class="list-icon-dark"></div>
+                            <span><strong>Python Mastery:</strong> Learning the core logic, loops, and data structures required for board exams.</span>
+                        </li>
+                        <li>
+                            <div class="list-icon-dark"></div>
+                            <span><strong>Web Development:</strong> Coding interactive, responsive websites using HTML, CSS, and modern design.</span>
+                        </li>
+                        <li>
+                            <div class="list-icon-dark"></div>
+                            <span><strong>Smart Algorithms:</strong> Demystifying tech by writing the logic behind simple chatbots.</span>
+                        </li>
+                        <li>
+                            <div class="list-icon-dark"></div>
+                            <span><strong>College-Ready Portfolio:</strong> Graduating with a completed digital project.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Visual 2: The Data Pipeline (Glitch-Free) -->
+                <div class="course-visual-col">
+                    <div class="visual-canvas scale-fix">
+                        
+                        <div class="pipeline-wrapper">
+                            <!-- Input: Code Editor -->
+                            <div class="mockup-panel ide-panel">
+                                <div class="panel-header"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+                                <div class="code-lines">
+                                    <div class="cl w-80 blue"></div>
+                                    <div class="cl w-60 indent pink"></div>
+                                    <div class="cl w-40 indent green"></div>
+                                    <div class="cl w-70 blue"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Animated Connection Lines -->
+                            <div class="connection-lines">
+                                <div class="conn-line top-line"><div class="packet packet-1"></div></div>
+                                <div class="conn-line bottom-line"><div class="packet packet-2"></div></div>
+                            </div>
+
+                            <!-- Outputs: AI & App -->
+                            <div class="output-stack">
+                                <div class="mockup-panel output-panel ai-panel">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                    <span class="panel-tag cyan-tag">Logic Built</span>
+                                </div>
+                                <div class="mockup-panel output-panel app-panel">
+                                    <div class="mini-app-nav"></div>
+                                    <div class="mini-app-grid"><div></div><div></div></div>
+                                    <span class="panel-tag purple-tag">App Live</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="canvas-glow glow-cyan"></div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
-        
     </div>
 </section>
-<!-- Meet the Mentor Section (Ultra-Premium Apple Masterclass Style) -->
+<!-- Elite Masterclass Series (FOMO & Urgency Design) -->
+<section class="masterclass-section" id="monthly-masterclass">
+    <div class="content-wrapper">
+        
+        <!-- Section Header -->
+        <div class="section-heading-center fade-up">
+            <span class="hero-badge-pill">The Elite Masterclass</span>
+            <h2 class="apple-heading">Rotating topics. <span class="text-orange-gradient">Strictly limited seats.</span></h2>
+            <p class="apple-subheading">A highly exclusive, 4-week deep dive into the tech industry's most trending topics. We launch a new master course every month. Once it is full, enrollment closes.</p>
+        </div>
+
+        <!-- The FOMO Card -->
+        <div class="fomo-card glass-panel-dark fade-up delay-1">
+            <div class="fomo-ambient-glow"></div>
+            
+            <div class="fomo-grid">
+                
+                <!-- Left: The Value Proposition -->
+                <div class="fomo-info">
+                    <div class="fomo-status">
+                        <span class="live-dot-ping bg-orange"></span> 
+                        <span class="status-text">Now Enrolling for October</span>
+                    </div>
+                    
+                    <h3>The AI Prompt Engineer</h3>
+                    <p class="fomo-desc">
+                        Our most highly anticipated master course yet. We teach students how to intelligently command AI tools to generate stunning digital art, write interactive stories, and brainstorm complex logic. 
+                    </p>
+                    
+                    <ul class="fomo-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            Intensive 4-Week Program (8 Sessions)
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            Build an AI-Generated Portfolio
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            Zero Prior Coding Required
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right: The Urgency & Action Panel -->
+                <div class="fomo-action-panel">
+                    <div class="urgency-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        <h4>Extremely High Demand</h4>
+                    </div>
+
+                    <!-- Visual Progress Bar (The ultimate FOMO trigger) -->
+                    <div class="capacity-visual">
+                        <div class="capacity-labels">
+                            <span>October Cohort Capacity</span>
+                            <span class="text-orange">85% Full</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill"></div>
+                        </div>
+                        <p class="seats-warning">Only <strong>3 seats</strong> remaining.</p>
+                    </div>
+
+                    <a href="#enroll" class="btn-primary-fomo">
+                        Secure Your Spot Now
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <p class="guarantee-text">No payment required to book a visit.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Open Letter Section (Ultra-Premium Apple Editorial) -->
 <section class="mentor-bespoke section-dark" id="mentor">
-    <!-- Deep Cinematic Spotlight -->
+    <!-- Deep Cinematic Ambient Spotlight (Wider & Softer) -->
     <div class="mentor-spotlight"></div>
 
     <div class="content-wrapper relative-wrapper">
-        <div class="mentor-grid">
+        <div class="editorial-container">
             
-            <!-- LEFT: macOS-Style Glass Profile Widget -->
-            <div class="mentor-visual-col fade-up">
-                <!-- Glowing Aura behind the card -->
-                <div class="card-aura"></div>
+            <!-- Centered Header & Quote -->
+            <div class="editorial-header fade-up">
+                <div class="hero-badge-pill light-pill badge-center">An Open Letter to Parents</div>
                 
-                <div class="profile-widget glass-panel-ultra">
-                    <div class="widget-header">
-                        <span class="live-indicator"><span class="pulse-dot"></span> Active Mentor</span>
-                        <span class="verified-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#32d74b" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                        </span>
-                    </div>
-                    
-                    <div class="profile-image-wrapper">
-                        <!-- Replace with your actual photo -->
-                        <img src="assets/mentor-photo.png" alt="Chief Instructor" class="mentor-photo">
-                    </div>
-                    
-                    <div class="profile-info">
-                        <h4>Chief Instructor</h4>
-                        <p>Professional Software Engineer</p>
-                    </div>
-
-                    <!-- Micro Tech-Stack Badges -->
-                    <div class="mentor-tech-stack">
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">AI & Vision</span>
-                        <span class="tech-pill">Web Dev</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- RIGHT: The Founder's Note -->
-            <div class="mentor-text-col">
-                <div class="hero-badge-pill light-pill fade-up">A Note from the Founder</div>
-                
-                <!-- The Carl Sagan Quote -->
-                <h2 class="mentor-heading fade-up delay-1">
+                <h2 class="editorial-quote">
                     "Imagination will often carry us to worlds that never were.<br>
                     <span class="text-blue-gradient">But without it, we go nowhere."</span>
                 </h2>
-                <div class="quote-author-tag fade-up delay-1">— Carl Sagan</div>
+                <div class="quote-author-tag">— Carl Sagan</div>
+            </div>
+
+            <!-- The Dark Silk Document (The Letter) -->
+            <div class="editorial-document dark-silk-panel fade-up delay-1">
                 
-                <div class="mentor-letter fade-up delay-2">
-                    <p>Dear Parents,</p>
-                    <p>Throughout my career as a Software Engineer, I have built everything from interactive web applications to artificial intelligence systems that analyze complex satellite imagery. I know exactly what it takes to succeed in the real tech industry.</p>
-                    <p>But when I looked at how coding was being taught to kids, I noticed a massive problem: they were just memorizing syntax or playing block games. They weren't learning how to <em>think</em> like creators.</p>
-                    <p>I started Space Code Pro to bridge that gap. I bring my real-world engineering experience directly into the classroom, teaching your child resilience, pure logic, and the joy of building actual technology from scratch.</p>
+                <!-- Glowing Top Accent Line -->
+                <div class="document-accent-line"></div>
+                
+                <div class="document-content">
                     
-                    <!-- Premium Handwritten Signature (SVG) -->
-                    <!-- Premium Static Signature -->
-                    <div class="founder-signature">
+                    <!-- Official Minimalist Founder Seal -->
+                    <div class="founder-seal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M9 12l2 2 4-4"></path>
+                        </svg>
+                    </div>
+
+                    <p class="salutation">Dear Parents,</p>
+                    
+                    <p>Throughout my career as a professional Software Engineer, I have built real world applications using the exact same technologies that power today's top tech companies from Artificial Intelligence to modern web platforms. I know firsthand what it takes to succeed in a rapidly changing digital world.</p>
+                    
+                    <p>But when I looked at how coding was being taught to students, I noticed a frustrating trend: most classes just have kids playing basic block games or memorizing dry textbook theory. They aren't learning how to actually <span class="text-highlight">think like engineers.</span></p>
+                    
+                    <p>I started Space Code Pro to change that. I bring real industry experience directly into the classroom. Instead of boring lectures, your child will master trending skills like Python, AI, and Web Design by actively building their own projects.</p>
+                    
+                    <p>We don't just teach them how to type code we teach them pure logic, creative problem solving, and the confidence to turn their ideas into reality.</p>
+                    
+                    <!-- Premium Roman Signature -->
+                    <div class="founder-signature-editorial">
                         <div class="signature-text">Faiz Mansuri</div>
-                        <span class="signature-title">Founder & Lead Engineer</span>
+                        <span class="signature-title">Founder & Chief Instructor</span>
                     </div>
                 </div>
-                
             </div>
+            
         </div>
     </div>
 </section>
@@ -707,5 +821,27 @@
         </div>
     </div>
 </footer>
+<!-- Mobile Navbar Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Toggle menu open/close when clicking the hamburger
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close the menu automatically when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    });
+</script>
 </body>
 </html>
