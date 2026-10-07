@@ -40,21 +40,60 @@ document.addEventListener("DOMContentLoaded", () => {
             navbar.style.background = 'rgba(255, 255, 255, 0.7)';
         }
     });
+// Real Web3Forms AJAX Submission
+    const form = document.getElementById('enrollForm');
     
-    // Prevent default form submission for demo purposes
-    const form = document.querySelector('.apple-form');
     if(form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop standard HTML redirect
+            
             const btn = form.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = "Request Sent!";
-            btn.style.backgroundColor = "#34c759"; // Apple green
-            setTimeout(() => {
-                btn.innerText = originalText;
-                btn.style.backgroundColor = "";
-                form.reset();
-            }, 3000);
+            const originalText = btn.innerHTML;
+            
+            // Show loading state
+            btn.innerHTML = "Sending...";
+            btn.style.opacity = "0.7";
+            btn.style.pointerEvents = "none"; // Prevent double clicks
+            
+            // Gather the data
+            const formData = new FormData(form);
+            
+            // Send the data to Web3Forms
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                
+                if (response.status == 200) {
+                    // Success! Show green confirmation
+                    btn.innerHTML = "Request Sent!";
+                    btn.style.backgroundColor = "#32d74b"; // Apple green
+                    btn.style.opacity = "1";
+                    form.reset(); // Clear the inputs
+                } else {
+                    // Something went wrong on Web3Forms side
+                    console.log(response);
+                    btn.innerHTML = "Error. Try Again.";
+                    btn.style.backgroundColor = "#ff3b30"; // Apple red
+                    btn.style.opacity = "1";
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                btn.innerHTML = "Network Error.";
+                btn.style.backgroundColor = "#ff3b30";
+                btn.style.opacity = "1";
+            })
+            .then(function() {
+                // Reset button back to normal after 4 seconds
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.backgroundColor = "";
+                    btn.style.pointerEvents = "auto";
+                }, 4000);
+            });
         });
     }
 
@@ -114,25 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. Form Submission Mock
-    const form = document.getElementById('enrollForm');
-    if(form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.innerText;
-            
-            btn.innerText = "Request Sent!";
-            btn.style.backgroundColor = "#34c759"; // Success Green
-            btn.style.color = "#fff";
-            
-            setTimeout(() => {
-                btn.innerText = originalText;
-                btn.style.backgroundColor = ""; // Revert to original
-                form.reset();
-            }, 3000);
-        });
-    }
+    
 // --- Dynamic SVG Avatar Rotation ---
     const avatars = document.querySelectorAll('.avatar-svg-img');
     
