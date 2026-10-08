@@ -272,5 +272,74 @@ document.addEventListener("DOMContentLoaded", () => {
         }, { passive: true }); // Ensure smooth scrolling
     }
 
+    const wrapper = document.querySelector('.marquee-wrapper');
+        const firstGroup = document.querySelector('.marquee-group');
+        
+        if (!wrapper || !firstGroup) return;
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        let autoScrollTimer;
+        let speed = 1; // Adjust this for faster/slower auto-rotation
+
+        // 1. Auto-Scroll Logic (60fps)
+        const autoScroll = () => {
+            if (!isDown) {
+                wrapper.scrollLeft += speed;
+                
+                // Calculate the exact width of the first group plus the gap (2rem = ~32px)
+                const groupWidth = firstGroup.offsetWidth + 32; 
+                
+                // Flawless infinite loop reset
+                if (wrapper.scrollLeft >= groupWidth) {
+                    wrapper.scrollLeft = 0;
+                }
+            }
+            autoScrollTimer = requestAnimationFrame(autoScroll);
+        };
+
+        // Start the rotation
+        autoScrollTimer = requestAnimationFrame(autoScroll);
+
+        const pauseScroll = () => cancelAnimationFrame(autoScrollTimer);
+        const resumeScroll = () => {
+            cancelAnimationFrame(autoScrollTimer);
+            autoScrollTimer = requestAnimationFrame(autoScroll);
+        };
+
+        // 2. Pause on Hover (Desktop)
+        wrapper.addEventListener('mouseenter', pauseScroll);
+        wrapper.addEventListener('mouseleave', resumeScroll);
+
+        // 3. Pause on Touch (Mobile)
+        wrapper.addEventListener('touchstart', pauseScroll, {passive: true});
+        wrapper.addEventListener('touchend', resumeScroll, {passive: true});
+
+        // 4. Desktop Mouse Dragging Logic
+        wrapper.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - wrapper.offsetLeft;
+            scrollLeft = wrapper.scrollLeft;
+            pauseScroll();
+        });
+
+        wrapper.addEventListener('mouseleave', () => {
+            isDown = false;
+            resumeScroll();
+        });
+
+        wrapper.addEventListener('mouseup', () => {
+            isDown = false;
+            resumeScroll();
+        });
+
+        wrapper.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - wrapper.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll speed multiplier when dragging
+            wrapper.scrollLeft = scrollLeft - walk;
+        });
     
 });
